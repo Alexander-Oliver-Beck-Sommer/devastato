@@ -1,0 +1,23 @@
+// Ruda - used for heading titles
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ruda:wght@400;500;600;700;800;900&display=swap");
+$font_ruda: "Ruda", sans-serif;
+
+// Roboto Slab - used for pretty much all text except headings
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+$font_roboto_slab: "Roboto Slab", serif;
+
+// Font Sizes
+$font__size_10: 0.625rem;
+$font__size_12: 0.75rem;
+$font__size_14: 0.875rem;
+$font__size_16: 1rem;
+$font__size_18: 1.125rem;
+$font__size_20: 1.25rem;
+$font__size_22: 1.375rem;
+$font__size_24: 1.5rem;
+$font__size_26: 1.625rem;
+$font__size_28: 1.75rem;
+$font__size_30: 1.875rem;
+$font__size_32: 2rem;
+$font__size_34: 2.125rem;
+$font__size_36: 2.25rem;
