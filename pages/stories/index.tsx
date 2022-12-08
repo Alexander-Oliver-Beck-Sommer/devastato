@@ -1,9 +1,9 @@
-import styles from "../scss/pages/_404.module.scss";
+import styles from "../scss/pages/_stories.module.scss";
 
-export default function ErrorPage() {
+export default function StoriesPage() {
   return (
     <div>
-      <h1>Error Page!</h1>
+      <h1>Stories Page!</h1>
     </div>
   );
 }
