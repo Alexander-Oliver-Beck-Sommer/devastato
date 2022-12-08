@@ -1,4 +1,4 @@
-@use "./abstracts/mixins" as *;
+@use "./abstracts/index" as *;
 
 * {
   box-sizing: border-box;
@@ -6,6 +6,7 @@
 
 html,
 body {
+  height: 5000px;
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
@@ -20,7 +21,7 @@ body {
 }
 
 ::selection {
-  color: $colos_main_white;
+  color: $color_main_white;
   background: $color_main_black;
 }
 
@@ -59,6 +60,13 @@ ul {
 
 p {
   line-height: 150%;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: center;
 }
 
 h1,
