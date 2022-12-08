@@ -11,7 +11,6 @@ export default function ErrorPage() {
           content="Woops! Looks like something went wrong in the search of the page you were looking for. Perhaps it's been deleted or never existed?"
         />
       </Head>
-      <h1>Index</h1>
       <h1>Error Page!</h1>
     </>
   );
