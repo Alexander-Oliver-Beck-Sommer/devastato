@@ -1,16 +1,100 @@
+@use "./abstracts/mixins" as *;
+
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
+  scroll-behavior: smooth;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: $font_roboto_slab;
+  background-color: $color_main_white;
+  color: $color_main_black;
+}
+
+::-moz-selection {
+  color: $color_main_white;
+  background: $color_main_black;
+}
+
+::selection {
+  color: $colos_main_white;
+  background: $color_main_black;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: $color_main_dark_grey $color_main_white;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: em(16px);
+}
+
+*::-webkit-scrollbar-track {
+  background: $color_main_white;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $color_main_dark_grey;
+  border-radius: em(10px);
+  border: em(3px) solid $color_main_white;
 }
 
 a {
+  cursor: pointer;
   color: inherit;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+p {
+  line-height: 150%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 150%;
+  margin: 0;
+  font-family: $font_ruda;
+  letter-spacing: em(2px);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: $font_size_32;
+}
+
+h2 {
+  font-size: $font_size_24;
+}
+
+h3 {
+  font-size: $font_size_18;
+}
+
+h4 {
+  font-size: $font_size_16;
+}
+
+h5 {
+  font-size: $font_size_14;
+}
+
+h6 {
+  font-size: $font_size_10;
 }
