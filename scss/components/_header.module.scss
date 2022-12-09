@@ -22,6 +22,7 @@
   & .header_burger_icon {
     justify-content: flex-start;
     & .icon_wrapper {
+      border-radius: em(5px);
       z-index: 99;
     }
   }
@@ -111,12 +112,12 @@
   top: 0;
   max-width: 0%;
   height: 100vh;
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  overflow: auto;
-  transition: 250ms ease-in-out;
+  overflow: hidden auto;
+  transition: 250ms ease-in-out, opacity 250ms ease-in-out, height 0ms;
   & .navigation_menu {
     width: 100%;
     background-color: $color_main_white;
@@ -128,76 +129,57 @@
       max-height: 100px;
       height: em(100px);
       padding: 15px;
-      border: solid 1px red;
       display: flex;
       justify-content: flex-end;
       align-items: center;
       font-size: em(48px);
+      & a {
+        transition: color 250ms ease-in-out;
+        &:hover {
+          color: $color_main_light_black;
+        }
+      }
+    }
+    & .menu_content_container {
+      padding: 0 em(15px) em(50px);
+      min-height: 500px;
+      display: flex;
+      flex-direction: column;
+      & a {
+        border-radius: em(5px);
+        & .menu_navigation_links {
+          white-space: nowrap;
+          max-height: em(50px);
+          width: 100%;
+          padding: em(15px);
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: em(10px);
+          & .link_icon {
+            // The min-width prevents the icon from resizing during the closing and opening animation of the menu container itself
+            min-width: em(22px);
+            font-size: $font_size_22;
+          }
+          & h4 {
+            letter-spacing: em(1px);
+          }
+        }
+        transition: background-color 250ms ease-in-out;
+        &:hover {
+          background-color: $color_main_ghost_white;
+        }
+        &:focus {
+          background-color: $color_main_ghost_white;
+        }
+      }
+      & .navigation_links_seperator {
+        border-top: solid em(2px) $color_main_ghost_white;
+        margin: em(25px) 0;
+      }
     }
   }
+  @include desktop {
+    width: em(400px);
+  }
 }
-
-// .navigation_menu {
-//   z-index: 98;
-//   overflow: hidden;
-//   visibility: hidden;
-//   width: 100%;
-//   max-width: 0%;
-//   height: 100vh;
-//   background-color: $color_main_white;
-//   transition: 250ms ease-in-out;
-//   position: absolute;
-//   top: 0;
-//   border-radius: 0 em(25px) em(25px) 0;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-start;
-//   align-items: stretch;
-//   padding: 0 em(15px);
-//   color: $color_main_black;
-//   & .menu_top_part {
-//     height: em(100px);
-//     max-height: em(100px);
-//     padding: em(15px) 0;
-//     display: flex;
-//     align-items: center;
-//     justify-content: flex-end;
-//     & a {
-//       font-size: em(48px);
-//       transition: color 250ms ease-in-out;
-//       &:hover {
-//         color: $color_main_light_black;
-//       }
-//     }
-//   }
-//   & ul {
-//     display: flex;
-//     flex-direction: column;
-//     & .navigation_menu_links {
-//       gap: em(10px);
-//       display: flex;
-//       flex-direction: row;
-//       justify-content: flex-start;
-//       align-items: center;
-//       color: $color_main_black;
-//       border-radius: em(5px);
-//       padding: em(15px);
-//       transition: background-color 250ms ease-in-out;
-//       & h4 {
-//         letter-spacing: em(1px);
-//       }
-//       & .menu_links_icons {
-//         font-size: $font_size_24;
-//       }
-//       &:hover {
-//         background-color: $color_main_ghost_white;
-//       }
-//       &:focus {
-//         background-color: $color_main_ghost_white;
-//       }
-//     }
-//   }
-//   @include tablet {
-//     width: em(400px);
-//   }
-// }
