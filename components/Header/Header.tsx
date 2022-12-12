@@ -81,6 +81,7 @@ export default function Header() {
                     "visibility: hidden; max-width: 0%;";
                   document.getElementById("hamburgerIcon").style.color =
                     "#fdfdfd";
+                  document.body.style.overflow = "visible";
                 }
               }}
             />
