@@ -36,6 +36,18 @@ button {
   text-align: center;
 }
 
+// This is for the landing banner swiper
+.swiper-pagination-bullet {
+  background-color: $color_main_light_grey !important;
+  width: em(12px) !important;
+  height: em(12px) !important;
+  margin: 0 em(15px) !important;
+  transition: 0.3s ease-in-out;
+}
+.swiper-pagination-bullet-active {
+  background-color: $color_main_white !important;
+}
+
 h1,
 h2,
 h3,

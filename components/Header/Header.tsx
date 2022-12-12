@@ -19,21 +19,19 @@ import {
 import { HiSquares2X2 } from "react-icons/hi2";
 import { SiRabbitmq } from "react-icons/si";
 import { RiLoginCircleFill } from "react-icons/ri";
-
-if (typeof window !== "undefined") {
-  // document
-  //   .querySelectorAll(`.${styles.menu_navigation_links}`)
-  //   .addEventListener("click", () => {
-  //     document.querySelector(
-  //       `.${styles.navigation_opacity_background}`
-  //     ).style.border = "solid 1px red";
-  //   });
-}
+import { useRouter } from "next/router";
 
 export default function Header() {
+  const router = useRouter();
   return (
     <>
-      <header className={styles.devastato_primary_header}>
+      <header
+        className={styles.devastato_primary_header}
+        style={{
+          backgroundColor: router.route == "/" ? "transparent" : "",
+          position: router.route == "/" ? "absolute" : "",
+        }}
+      >
         <div className={styles.header_burger_icon}>
           <div className={styles.icon_wrapper} id="hamburgerIcon">
             <Hamburger

@@ -64,7 +64,7 @@ export default function Footer() {
                   href="/about"
                   alt="Click here to navigate to the about page."
                 >
-                  <p>The About</p>
+                  <p>About</p>
                 </Link>
               </li>
             </ul>

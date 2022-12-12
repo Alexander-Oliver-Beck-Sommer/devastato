@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import LandingBanner from "../components/LandingBanner/LandingBanner";
 
 export default function HomePage() {
   return (
@@ -30,7 +31,8 @@ export default function HomePage() {
         />
         <link rel="manifest" href="/site.webmanifest" /> */}
       </Head>
-      <h1>Index</h1>
+      <LandingBanner />
+      <h4>index</h4>
     </>
   );
 }
