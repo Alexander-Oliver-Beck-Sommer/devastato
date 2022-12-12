@@ -8,6 +8,7 @@ The frontend composes of SCSS/SASS and AnimeJS to animate a variety of things.
 Packages that are used in this project compose of:
 
 ```bash
+- SwiperJS
 - AnimeJS
 - React Icons
 - Hamburger React
