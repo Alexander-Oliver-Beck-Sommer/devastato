@@ -1,1 +1,91 @@
 @use "../abstracts/index" as *;
+
+.footer_container {
+  background-color: $color_main_black;
+  & p {
+    color: $color_main_light_grey;
+    margin-bottom: 0;
+  }
+  & h3 {
+    letter-spacing: em(1px);
+    text-transform: none;
+    font-size: $font_size_20;
+  }
+  color: $color_main_white;
+  & .footer_content_section {
+    background-color: $color_main_black;
+    padding: em(75px) em(15px) em(50px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: em(50px);
+    @include xl {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: em(75px) em(100px) em(50px);
+      & .content_desc {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      & .content_links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      & .content_contact {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+      & .content_socials {
+        width: 100%;
+      }
+    }
+    & .content_desc {
+      @include tablet {
+        max-width: em(600px);
+      }
+    }
+    & .content_links {
+      & a {
+        & p {
+          transition: 0.3s ease-in-out;
+        }
+        &:hover {
+          & p {
+            color: $color_main_white;
+          }
+        }
+      }
+    }
+    & .content_contact {
+      & a {
+        transition: 0.3s ease-in-out;
+        &:hover {
+          color: $color_main_white;
+        }
+      }
+    }
+    & .content_socials {
+      display: flex;
+      justify-content: flex-start;
+      gap: em(15px);
+      font-size: $font_size_24;
+      a {
+        display: flex;
+        color: $color_main_light_grey;
+        transition: 0.3s ease-in-out;
+        &:hover {
+          color: $color_main_white;
+        }
+      }
+    }
+  }
+  & .copyright_section {
+    color: $color_main_white;
+    text-align: center;
+    background-color: $color_main_light_black;
+    padding: em(30px) em(15px);
+  }
+}
